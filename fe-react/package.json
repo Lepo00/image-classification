@@ -12,6 +12,9 @@
     "@tensorflow/tfjs-converter": "^4.10.0",
     "node-sass": "^9.0.0"
   },
+  "devDependencies": {
+    "web-vitals": "^3.4.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
