@@ -1,19 +1,15 @@
 {
-  "name": "fe-react",
+  "name": "imageid",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tensorflow-models/mobilenet": "2.1.1",
+    "@tensorflow/tfjs-converter": "^4.10.0",
+    "@tensorflow/tfjs-core": "^4.10.0",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "@tensorflow-models/mobilenet": "^2.1.1",
-    "@tensorflow/tfjs-core": "^4.10.0",
-    "@tensorflow/tfjs-converter": "^4.10.0",
-    "node-sass": "^9.0.0"
-  },
-  "devDependencies": {
-    "web-vitals": "^3.4.0"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
