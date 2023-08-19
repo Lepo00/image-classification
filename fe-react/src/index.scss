@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {}
+
+code {}
+
+.header {}
+
+.inputHolder {}
+
+.mainWrapper {}
+
+.mainContent {
+
+  @media (max-width: 800px) {}
+}
+
+.inputHolder {
+
+
+  input[type='text'] {}
+
+  .uploadInput {}
+
+  .or {}
+
+  .uploadImage {}
+}
+
+.imageHolder {
+
+
+  @media (max-width: 800px) {}
+
+  &:empty {}
+
+  img {}
+}
+
+.resultsHolder {
+
+
+  @media (max-width: 800px) {}
+
+  .result {
+
+
+    &:first-of-type {
+
+
+      .name {}
+
+      .confidence {}
+    }
+
+    .name {}
+
+    .confidence {
+
+
+      .bestGuess {}
+    }
+  }
+}
+
+.button {}
+
+.recentPredictions {
+
+
+  h2 {}
+
+  .recentImages {}
+
+  .recentPrediction {
+
+
+    @media (max-width: 1100px) {}
+
+    @media (max-width: 870px) {}
+
+    @media (max-width: 700px) {}
+
+    img {
+
+
+      @media (max-width: 700px) {}
+    }
+  }
+}
