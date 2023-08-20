@@ -32,6 +32,7 @@ function App() {
     } else {
       setImageURL(null);
     }
+    setResults([]);
   }
 
   const identify = async () => {
@@ -53,8 +54,6 @@ function App() {
     loadModel();
   }, [])
 
-  console.log(model)
-
   useEffect(() => {
     if (imageURL) {
       setHistory([imageURL, ...history]);
@@ -62,7 +61,7 @@ function App() {
   }, [imageURL]);
 
   if (isModelLoading) {
-    return <h2>Model Loading...</h2>
+    return <div class="loading"><h2 >Model Loading...</h2></div>
   }
 
   return (
@@ -72,7 +71,7 @@ function App() {
         <input type='file' accept='image/*' capture='camera' className='uploadInput' onChange={uploadImage} ref={fileInputRef} />
         <button className='uploadImage' onClick={triggerUpload}>Upload Image</button>
         <span className='or'>OR</span>
-        <input type="text" placeholder='Paster image URL' ref={textInputRef} onChange={handleOnChange} />
+        <input type="text" placeholder='Paste image URL' ref={textInputRef} onChange={handleOnChange} />
       </div>
       <div className="mainWrapper">
         <div className="mainContent">
@@ -84,7 +83,7 @@ function App() {
               return (
                 <div className='result' key={result.className}>
                   <span className='name'>{result.className}</span>
-                  <span className='confidence'>Confidence level: {(result.probability * 100).toFixed(2)}% {index === 0 && <span className='bestGuess'>Best Guess</span>}</span>
+                  <span className='confidence'>Confidence: {(result.probability * 100).toFixed(2)}%</span>
                 </div>
               )
             })}
